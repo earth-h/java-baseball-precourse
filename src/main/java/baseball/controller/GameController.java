@@ -1,11 +1,11 @@
 package baseball.controller;
 
-import static baseball.view.GameInputView.readWantNewGame;
+import static baseball.view.GameInputView.readWantGameOver;
 import static baseball.view.GameOutputView.printCompleteGame;
 import static baseball.view.GameOutputView.printMission;
 import static baseball.view.GameInputView.readNumber;
 import static baseball.view.GameOutputView.printMissionResult;
-import static baseball.view.GameOutputView.printWantNewGame;
+import static baseball.view.GameOutputView.printWantGameOver;
 
 import baseball.model.Computer;
 import baseball.model.DifferentRandomNumberGenerator;
@@ -40,7 +40,7 @@ public class GameController {
         } while(strikeCount != NUMBER_TOTAL_LENGTH);
 
         printCompleteGame(strikeCount);
-        return checkWantNewGame();
+        return checkWantGameOver();
     }
 
     private int doGame(Computer computer) {
@@ -50,8 +50,8 @@ public class GameController {
         return gameResult.getStrike();
     }
 
-    private String checkWantNewGame() {
-        printWantNewGame();
-        return readWantNewGame();
+    private String checkWantGameOver() {
+        printWantGameOver();
+        return readWantGameOver();
     }
 }
