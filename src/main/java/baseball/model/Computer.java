@@ -10,8 +10,7 @@ public class Computer {
     private final Map<Integer, Integer> number;
 
     public Computer(NumberGenerator numberGenerator, NumberControl numberControl) {
-        number = numberGenerator.generateNumber(numberControl.getNumberTotalLength(),
-                numberControl.getStartInclusive(), numberControl.getEndInclusive());
+        number = numberGenerator.generateNumber(numberControl);
     }
 
     public Map<Integer, Integer> getNumber() {

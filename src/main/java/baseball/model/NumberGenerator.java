@@ -15,5 +15,5 @@ public interface NumberGenerator {
      * @param endInclusive 각 자리수에 들어갈 수 있는 가장 큰 숫자
      * @return 생성된 숫자
      */
-    Map<Integer, Integer> generateNumber(final int numberTotalLength, final int startInclusive, final int endInclusive);
+    Map<Integer, Integer> generateNumber(final NumberControl numberControl);
 }
