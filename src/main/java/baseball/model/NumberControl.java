@@ -31,8 +31,8 @@ public class NumberControl {
 
     /**
      * 숫자 생성 시, 각 자리에 들어갈 수 있는 최소/최대 수 validation
-     * @param startInclusive
-     * @param endInclusive
+     * @param startInclusive 각 자리수에 들어갈 수 있는 가장 작은 숫자
+     * @param endInclusive 각 자리수에 들어갈 수 있는 가장 큰 숫자
      */
     private static void validateNumberRange(final int startInclusive, final int endInclusive) {
         if(startInclusive > 9) {

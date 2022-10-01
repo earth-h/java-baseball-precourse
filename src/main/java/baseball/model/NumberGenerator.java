@@ -10,9 +10,7 @@ public interface NumberGenerator {
 
     /**
      * 원하는 자리수의 숫자 생성
-     * @param numberTotalLength 숫자의 총 자리수(예: 123 -> 3)
-     * @param startInclusive 각 자리수에 들어갈 수 있는 가장 작은 숫자
-     * @param endInclusive 각 자리수에 들어갈 수 있는 가장 큰 숫자
+     * @param numberControl 숫자 생성기 사용시 필요한 설정값
      * @return 생성된 숫자
      */
     Map<Integer, Integer> generateNumber(final NumberControl numberControl);
