@@ -11,7 +11,7 @@ public class NumberControl {
 
     public NumberControl(int numberTotalLength, int startInclusive, int endInclusive) {
         validateNumberLength(numberTotalLength);
-        validateRange(startInclusive, endInclusive);
+        validateNumberRange(startInclusive, endInclusive);
         this.numberTotalLength = numberTotalLength;
         this.startInclusive = startInclusive;
         this.endInclusive = endInclusive;
@@ -34,7 +34,7 @@ public class NumberControl {
      * @param startInclusive
      * @param endInclusive
      */
-    private static void validateRange(final int startInclusive, final int endInclusive) {
+    private static void validateNumberRange(final int startInclusive, final int endInclusive) {
         if(startInclusive > 9) {
             throw new IllegalArgumentException("startInclusive cannot be greater then 9.");
         }
