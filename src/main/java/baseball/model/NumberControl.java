@@ -35,20 +35,36 @@ public class NumberControl {
      * @param endInclusive 각 자리수에 들어갈 수 있는 가장 큰 숫자
      */
     private static void validateNumberRange(final int startInclusive, final int endInclusive) {
+        validateStartNumberRange(startInclusive);
+        validateEndNumberRange(endInclusive);
+        if (startInclusive > endInclusive) {
+            throw new IllegalArgumentException("startInclusive cannot be greater than endInclusive.");
+        }
+    }
+
+    /**
+     * 숫자 생성 시, 각 자리에 들어갈 수 있는 최소 수 validation
+     * @param startInclusive 각 자리수에 들어갈 수 있는 가장 작은 숫자
+     */
+    private static void validateStartNumberRange(final int startInclusive) {
         if(startInclusive > 9) {
             throw new IllegalArgumentException("startInclusive cannot be greater then 9.");
         }
         if(startInclusive < 1) {
             throw new IllegalArgumentException("startInclusive cannot be less then 1.");
         }
+    }
+
+    /**
+     * 숫자 생성 시, 각 자리에 들어갈 수 있는 최대 수 validation
+     * @param endInclusive 각 자리수에 들어갈 수 있는 가장 큰 숫자
+     */
+    private static void validateEndNumberRange(final int endInclusive) {
         if(endInclusive > 9) {
             throw new IllegalArgumentException("endInclusive cannot be greater then 9.");
         }
         if(endInclusive < 1) {
             throw new IllegalArgumentException("endInclusive cannot be less then 1.");
-        }
-        if (startInclusive > endInclusive) {
-            throw new IllegalArgumentException("startInclusive cannot be greater than endInclusive.");
         }
     }
 
