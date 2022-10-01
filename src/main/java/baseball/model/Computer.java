@@ -7,14 +7,14 @@ import java.util.Map;
  */
 public class Computer {
 
-    private final Map<Integer, Integer> differentRandomNumber;
+    private final Map<Integer, Integer> number;
 
     public Computer(NumberGenerator numberGenerator, NumberControl numberControl) {
-        differentRandomNumber = numberGenerator.generateNumber(numberControl.getNumberTotalLength(),
+        number = numberGenerator.generateNumber(numberControl.getNumberTotalLength(),
                 numberControl.getStartInclusive(), numberControl.getEndInclusive());
     }
 
-    public Map<Integer, Integer> getDifferentRandomNumber() {
-        return differentRandomNumber;
+    public Map<Integer, Integer> getNumber() {
+        return number;
     }
 }

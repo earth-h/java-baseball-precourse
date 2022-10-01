@@ -12,6 +12,6 @@ class ComputerTest {
     void 컴퓨터가_생성한_숫자의_자리수는_예상한바와_맞음(int numberTotalLength, int expectedLength) {
         NumberControl numberControl = new NumberControl(numberTotalLength, 1, 9);
         Computer computer = new Computer(new DifferentRandomNumberGenerator(), numberControl);
-        assertThat(computer.getDifferentRandomNumber().size()).isEqualTo(expectedLength);
+        assertThat(computer.getNumber().size()).isEqualTo(expectedLength);
     }
 }
